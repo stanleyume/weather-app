@@ -36,7 +36,10 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)$/,
-        loader: 'file-loader'
+        loader: 'file-loader',
+        options: {
+          ouputPath: 'public/js',
+        }
       }
     ]
   }
