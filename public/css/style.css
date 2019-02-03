@@ -1,0 +1,28 @@
+body {
+  font-color: #333;
+  font-family: Verdana;
+}
+
+.title {
+  font-family: Trebuchet MS;
+}
+
+.card {
+  padding: 15px 10px;
+  background: #eee;
+  border: 1px solid #eee;
+  text-align: center;
+  margin: 0 10px;
+  display: inline-block;
+  min-width: 50px;
+  color: #555;
+  border-radius: 5px;
+}
+.card:hover {
+  background: #ddd;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.wi {
+  font-size: 35px;
+}
