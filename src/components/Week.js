@@ -9,13 +9,12 @@ class Week extends Component {
   }
 
   componentDidMount(){
-    this.setState({ok:'cool'})
     // fetch('https://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=fda51081520e7a071880563598af1696')
     fetch('https://api.openweathermap.org/data/2.5/forecast?q=Lagos,ng&APPID=fda51081520e7a071880563598af1696&cnt=7')
     .then((data) => data.json())
-    .then(function(data){
+    .then((data) => {
       console.log(data);
-      this.setState({location: 'Lagos, NG'});
+      this.setState({location: data.city.name + ', ' + data.city.country});
       console.log(this.state);
     })
     .catch((error)=>{
