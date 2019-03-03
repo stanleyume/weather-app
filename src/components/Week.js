@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Day from './Day';
+import moment from 'moment';
 
 class Week extends Component {
   constructor(props){
@@ -8,15 +9,17 @@ class Week extends Component {
   }
 
   componentDidMount(){
+    this.setState({ok:'cool'})
     // fetch('https://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=fda51081520e7a071880563598af1696')
-    fetch('https://api.openweathermap.org/data/2.5/forecast?q=Lagos,ng&APPID=fda51081520e7a071880563598af1696&cnt=5')
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=Lagos,ng&APPID=fda51081520e7a071880563598af1696&cnt=7')
     .then((data) => data.json())
     .then(function(data){
       console.log(data);
-      this.setState({location: 'Lagos, NG'})
+      this.setState({location: 'Lagos, NG'});
+      console.log(this.state);
     })
     .catch((error)=>{
-      console.log('Error');
+      console.log(error);
     });
   }
 

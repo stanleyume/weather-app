@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Day from './components/Day';
 import Week from './components/Week';
+import moment from 'moment';
 require('../public/css/weather-icons.min.css');
 require('../public/css/style.css');
 
